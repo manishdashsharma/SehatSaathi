@@ -42,6 +42,7 @@ def sample_user():
         "consent_given": True,
         "upload_count": 0,
         "call_count": 0,
+        "usage_count": 0,
         "is_active": True,
     }
 

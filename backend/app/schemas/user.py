@@ -53,7 +53,8 @@ class UserResponse(BaseModel):
     language: str
     role: str
     consent_given: bool
-    usage_count: int
+    upload_count: int
+    call_count: int
     is_active: bool
     created_at: datetime
 
@@ -66,7 +67,8 @@ class UserResponse(BaseModel):
             language=doc.get("language", "hi"),
             role=doc.get("role", "user"),
             consent_given=doc.get("consent_given", False),
-            usage_count=doc.get("usage_count", 0),
+            upload_count=doc.get("upload_count", 0),
+            call_count=doc.get("call_count", 0),
             is_active=doc.get("is_active", True),
             created_at=doc["created_at"],
         )
